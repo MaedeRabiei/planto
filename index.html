@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>planto</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header class="w-11/12 mx-auto text-white px-8 py-6">
+      <nav class="flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="./src/assets/logo.png" alt="Planto logo" class="w-10" />
+          <h4 class="font-bold">Planto.</h4>
+        </div>
+        <ul class="md:flex hidden items-center gap-10 text-sm md:text-lg">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">Plants Type⌄</a>
+          </li>
+          <li>
+            <a href="#">More</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-7">
+          <img
+            src="./src/assets/icons/search.svg"
+            alt="Search"
+            class="w-5 h-5"
+          />
+          <img src="./src/assets/icons/bag .svg" alt="Bag" class="w-5 h-5" />
+          <button
+            class="md:hidden"
+            type="button"
+            data-drawer-target="drawer-navigation"
+            data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation"
+          >
+            <img
+              src="./src/assets/icons/aside.svg"
+              alt="aside icon"
+              class="w-6 h-5"
+            />
+          </button>
+          <div
+            id="drawer-navigation"
+            class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-0 bg-mainGreen border-e border-darkGreen"
+            tabindex="-1"
+            aria-labelledby="drawer-navigation-label"
+          >
+            <div class="flex mt-10">
+              <img src="./src/assets/logo.png" alt="Planto logo" class="w-10" />
+              <h4 class="font-bold">Planto.</h4>
+            </div>
+            <div class="border-t-2 border-white w-full mt-4"></div>
+            <ul class="flex flex-col gap-7 text-white text-sm mt-7">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <button
+                  id="doubleDropdownButton"
+                  data-dropdown-toggle="doubleDropdown"
+                  data-dropdown-placement="right-start"
+                  type="button"
+                  class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                >
+                  Dropdown
+                  <svg
+                    class="h-4 w-4 ms-auto rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m9 5 7 7-7 7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id="doubleDropdown"
+                  class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44"
+                >
+                  <ul
+                    class="p-2 text-sm text-body font-medium"
+                    aria-labelledby="doubleDropdownButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >Overview</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >My downloads</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >Billing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                        >Rewards</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">More</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- drawer component -->
+      </nav>
+    </header>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

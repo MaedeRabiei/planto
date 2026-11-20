@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
+
+@plugin "flowbite/plugin";
+
+@source "../node_modules/flowbite";
+
+body {
+  background-color: #171f14;
+}
+
+@theme {
+  --color-mainGreen: #182015;
+  --color-darkGreen:#0f150d;
+}
