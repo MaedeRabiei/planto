@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header class="w-11/12 mx-auto text-white px-8 py-6">
+    <header class="w-11/12 mx-auto text-white px-8 py-5">
       <nav class="flex items-center justify-between">
         <div class="flex items-center">
           <img src="./src/assets/logo.png" alt="Planto logo" class="w-10" />
@@ -17,8 +17,44 @@
           <li>
             <a href="./index.html">Home</a>
           </li>
-          <li>
-            <a href="#">Plants Type⌄</a>
+          <li class="relative">
+            <button
+              type="button"
+              class="flex group"
+              aria-controls="plantsType"
+              data-collapse-toggle="plantsType"
+            >
+              <span class="whitespace-nowrap flex items-center gap-1.5">
+                Plants Type
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 9-7 7-7-7"
+                  />
+                </svg>
+              </span>
+            </button>
+
+            <ul
+              id="plantsType"
+              class="hidden py-2 top-0 mt-10 space-y-7 w-40 absolute"
+            >
+              <li><a href="#">Indoor Plants</a></li>
+              <li><a href="#">Outdoor Plants</a></li>
+              <li><a href="#">Succulents</a></li>
+              <li><a href="#">Cactus</a></li>
+              <li><a href="#">Flowering Plants</a></li>
+              <li><a href="#">Air Purifying Plants</a></li>
+            </ul>
           </li>
           <li>
             <a href="#">More</a>
@@ -28,18 +64,18 @@
           </li>
         </ul>
         <div class="flex items-center gap-7">
-          <img
-            src="./src/assets/icons/search.svg"
-            alt="Search"
-            class="w-5 h-5"
-          />
-          <img src="./src/assets/icons/bag .svg" alt="Bag" class="w-5 h-5" />
+          <button type="button" aria-label="Search">
+            <img src="./src/assets/icons/search.svg" alt="search" class="w-5 h-5" />
+          </button>
+          <button type="button" aria-label="bag">
+            <img src="./src/assets/icons/bag.svg" alt="ShoppingBag" class="w-5 h-5" />
+          </button>
           <button
             class="md:hidden"
             type="button"
-            data-drawer-target="drawer-navigation"
-            data-drawer-show="drawer-navigation"
-            aria-controls="drawer-navigation"
+            data-drawer-target="drawer"
+            data-drawer-show="drawer"
+            aria-controls="drawer"
           >
             <img
               src="./src/assets/icons/aside.svg"
@@ -48,10 +84,10 @@
             />
           </button>
           <div
-            id="drawer-navigation"
-            class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-0 bg-mainGreen border-e border-darkGreen"
+            id="drawer"
+            class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-mainGreen border-e border-darkGreen"
             tabindex="-1"
-            aria-labelledby="drawer-navigation-label"
+            aria-labelledby="drawer-label"
           >
             <div class="flex mt-10">
               <img src="./src/assets/logo.png" alt="Planto logo" class="w-10" />
@@ -63,16 +99,18 @@
                 <a href="./index.html">Home</a>
               </li>
               <li>
+                <a href="#">More</a>
+              </li>
+              <li>
                 <button
-                  id="doubleDropdownButton"
-                  data-dropdown-toggle="doubleDropdown"
-                  data-dropdown-placement="right-start"
                   type="button"
-                  class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
+                  class="flex group"
+                  aria-controls="dropdown-example"
+                  data-collapse-toggle="dropdown-example"
                 >
-                  Dropdown
+                  <span class="whitespace-nowrap">Plants Type</span>
                   <svg
-                    class="h-4 w-4 ms-auto rtl:rotate-180"
+                    class="w-5 h-5"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -85,51 +123,37 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="m9 5 7 7-7 7"
+                      d="m19 9-7 7-7-7"
                     />
                   </svg>
                 </button>
-                <div
-                  id="doubleDropdown"
-                  class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44"
-                >
-                  <ul
-                    class="p-2 text-sm text-body font-medium"
-                    aria-labelledby="doubleDropdownButton"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                        >Overview</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                        >My downloads</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                        >Billing</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
-                        >Rewards</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#">More</a>
+                <ul id="dropdown-example" class="hidden py-2 mt-5 space-y-8">
+                  <li>
+                    <a href="./indoor-plants.html">Indoor Plants</a>
+                  </li>
+
+                  <li>
+                    <a href="./outdoor-plants.html">Outdoor Plants</a>
+                  </li>
+
+                  <li>
+                    <a href="./succulents.html">Succulents</a>
+                  </li>
+
+                  <li>
+                    <a href="./cactus.html">Cactus</a>
+                  </li>
+
+                  <li>
+                    <a href="./flowering-plants.html">Flowering Plants</a>
+                  </li>
+
+                  <li>
+                    <a href="./air-purifying-plants.html"
+                      >Air Purifying Plants</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">Contact</a>

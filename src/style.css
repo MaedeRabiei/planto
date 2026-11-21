@@ -13,3 +13,16 @@ body {
   --color-mainGreen: #182015;
   --color-darkGreen:#0f150d;
 }
+
+
+@layer components {
+  a {
+    @apply cursor-pointer hover:text-taupe-300 ;
+  }
+}
+
+@layer components {
+  button {
+    @apply cursor-pointer hover:text-taupe-300 ;
+  }
+}
